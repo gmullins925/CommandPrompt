@@ -14,6 +14,7 @@ namespace CommandPrompt
 			myCommand.SetScreenText(2, "This line 2 text");
 			myCommand.SetScreenText(1, "This is line 2 text");
 			myCommand.SetScreenText(4, "At line 4");
+			myCommand.SetScreenText(11, "Line 11 looks like this");
 			myCommand.Display();
 			Console.ReadLine();
 		}

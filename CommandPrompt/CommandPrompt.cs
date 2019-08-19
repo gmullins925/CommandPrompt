@@ -13,8 +13,7 @@ namespace CommandPrompt
 		string[] screenText;
 		int height;
 		int columns;
-
-
+		
 		public CommandPrompt(int height, int columns)
 		{
 			// set the backgroundColor to some default
