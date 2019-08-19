@@ -13,6 +13,8 @@ namespace CommandPrompt
 		string[] screenText;
 		int height;
 		int columns;
+		ConsoleColor backgroundColor;
+		ConsoleColor foregroundColor;
 		
 		public CommandPrompt(int height, int columns)
 		{
@@ -33,7 +35,14 @@ namespace CommandPrompt
 
 		public void Display()
 		{
+
+			backgroundColor = ConsoleColor.Red;   // or whatever you like
+			foregroundColor = ConsoleColor.Black; // or whatever you like
+
+			
+
 			// set the foreground and background colors
+
 			Console.Clear();             //  the Console object is available to us to control aspects of our terminal window. The Clear method will blank our window
 										 // The Clear method has blanked the screen and left the cursor at the top of the window.
 										 // We will now loop through the screenText array to put out text on the screen.
