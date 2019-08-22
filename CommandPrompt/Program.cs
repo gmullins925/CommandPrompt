@@ -28,10 +28,10 @@ namespace CommandPrompt
 				switch (menuOption)
 				{
 					case 1:
-					//	monitor.SetBackgroundColor(GetInput("Color? "));
+						monitor.SetBackgroundColor(GetInput("Color? "));
 						break;
 					case 2:
-					//	monitor.SetForegroundColor(GetInput("Color? "));
+						monitor.SetForegroundColor(GetInput("Color? "));
 						break;
 					case 3:
 						int lineNum = GetNumber("Enter Line Number ", windowSize - 1);
@@ -39,7 +39,7 @@ namespace CommandPrompt
 						monitor.SetScreenText(lineNum, text);
 						break;
 					case 4:
-					//	monitor.ClearScreen();
+						monitor.ClearScreen();
 						break;
 					case 5:
 						//monitor.SaveScreen( GetInput( "File: " ) );
@@ -51,7 +51,7 @@ namespace CommandPrompt
 						monitor.Display();
 						break;
 					default:
-					//	monitor.ClearScreen();
+						monitor.ClearScreen();
 						break;
 				}
 			} while (menuOption != 0);
