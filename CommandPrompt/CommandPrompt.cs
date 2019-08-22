@@ -89,6 +89,8 @@ namespace CommandPrompt
 				case "yellow": color = ConsoleColor.Yellow; break;
 				case "blue": color = ConsoleColor.Blue; break;
 				case "green": color = ConsoleColor.Green; break;
+				case "white": color = ConsoleColor.White; break;
+				case "magenta": color = ConsoleColor.Magenta; break;
 
 				default: color = ConsoleColor.DarkGray; break;
 			}
