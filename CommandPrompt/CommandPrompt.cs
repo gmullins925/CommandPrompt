@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace CommandPrompt
 {
@@ -101,6 +102,32 @@ namespace CommandPrompt
 			for (int i = 0; i < screenText.Length; i++)
 			{
 				screenText[i] = "";
+			}
+		}
+
+		public void SaveScreen(string fileName)
+		{
+			FileStream stream;
+			StreamWriter textOut = null;
+
+			try
+			{
+				fileName = "C:/Users/ACT/Desktop/CSharpPrgmSave/" + fileName;
+				stream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+				textOut = new StreamWriter(stream);
+
+				textOut.WriteLine("Testing, Testing 1,2,3");
+
+			}
+			catch (Exception)
+			{
+				Console.WriteLine("Error");
+			}
+
+			finally
+			{
+				if (textOut != null)
+					textOut.Close();
 			}
 		}
 	}

@@ -42,7 +42,7 @@ namespace CommandPrompt
 						monitor.ClearScreen();
 						break;
 					case 5:
-						//monitor.SaveScreen( GetInput( "File: " ) );
+						monitor.SaveScreen( GetInput( "File: " ) );
 						break;
 					case 6:
 						//monitor.ReloadScreen( GetInput( "File: " ) );
