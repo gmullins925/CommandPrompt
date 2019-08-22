@@ -23,14 +23,15 @@ namespace CommandPrompt
 								  "\t1 - Background Color\t2 - Foreground Color\n" +
 								  "\t3 - Screen Text     \t4 - Clear Screen\n" +
 								  "\t5 - Save Screen     \t6 - Reload Screen\n" +
-								  "Menu Option: ", 7);
+								  "\t7 - Display\n" +     
+								  "Menu Option: ", 8);
 				switch (menuOption)
 				{
 					case 1:
-						monitor.SetBackgroundColor(GetInput("Color? "));
+					//	monitor.SetBackgroundColor(GetInput("Color? "));
 						break;
 					case 2:
-						monitor.SetForegroundColor(GetInput("Color? "));
+					//	monitor.SetForegroundColor(GetInput("Color? "));
 						break;
 					case 3:
 						int lineNum = GetNumber("Enter Line Number ", windowSize - 1);
@@ -38,7 +39,7 @@ namespace CommandPrompt
 						monitor.SetScreenText(lineNum, text);
 						break;
 					case 4:
-						monitor.ClearScreen();
+					//	monitor.ClearScreen();
 						break;
 					case 5:
 						//monitor.SaveScreen( GetInput( "File: " ) );
@@ -46,8 +47,11 @@ namespace CommandPrompt
 					case 6:
 						//monitor.ReloadScreen( GetInput( "File: " ) );
 						break;
+					case 7:
+						monitor.Display();
+						break;
 					default:
-						monitor.ClearScreen();
+					//	monitor.ClearScreen();
 						break;
 				}
 			} while (menuOption != 0);
