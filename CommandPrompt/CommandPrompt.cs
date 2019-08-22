@@ -130,6 +130,35 @@ namespace CommandPrompt
 					textOut.Close();
 			}
 		}
+		public void ReloadScreen(string filenameRead)
+		{
+			FileStream stream;
+			StreamReader textIn = null;
+
+			try
+			{
+				filenameRead = "C:/Users/ACT/Desktop/CSharpPrgmSave/" + filenameRead;
+				stream = new FileStream(filenameRead, FileMode.Open, FileAccess.Read);
+				textIn = new StreamReader(stream);
+
+				for (int i = 0; i < screenText.Length; i++)
+				{
+					Console.WriteLine(textIn.ReadLine());
+				}
+
+				
+				Console.ReadLine();
+
+			}
+			catch (Exception e)
+			{
+				// Let the user know what went wrong.
+				Console.WriteLine("The file could not be read:");
+				Console.WriteLine(e.Message);
+			}
+
+
+			}
 	}
 }
 

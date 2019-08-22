@@ -17,6 +17,7 @@ namespace CommandPrompt
 
 			do
 			{
+				Console.Clear();
 				monitor.Display();
 				menuOption = GetNumber(
 								  "\t0 - Power\n" +
@@ -45,7 +46,7 @@ namespace CommandPrompt
 						monitor.SaveScreen( GetInput( "File: " ) );
 						break;
 					case 6:
-						//monitor.ReloadScreen( GetInput( "File: " ) );
+						monitor.ReloadScreen( GetInput( "File: " ) );
 						break;
 					case 7:
 						monitor.Display();
